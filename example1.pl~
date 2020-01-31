@@ -1,0 +1,14 @@
+ sum(X,Y) :- S is X+Y,write(S).
+ sum(X,Y,Z) :- Z is X+Y.
+ max(X,Y) :-
+    X=Y ->write("both are equal");
+    X>Y ->write(X);
+    X<Y ->write(Y).max(2,3).
+fact(0,1).
+fact(N,R) :-
+    N>0 ->
+    N1 is N-1,
+    fact(N1,R1),
+    R is N *R1.
+
+
